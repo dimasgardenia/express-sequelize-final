@@ -23,6 +23,11 @@
           <td>
             <%= d.kota %>
           </td>
+          <% if(d.ItemId == null){ %>
+          <td>no item yet</td>
+        <% }else{ %>
+          <%= d.Item.name %>
+          <% } %>
           <td><a href="/suppliers/edit/<%= d.id %>"><button type="button" name="button">Edit</button></a></td>
           <td><a href="/suppliers/delete/<%= d.id %>"><button type="button" name="button">Delete</button></a></td>
         </tr>
