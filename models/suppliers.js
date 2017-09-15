@@ -9,6 +9,9 @@ module.exports = function(sequelize, DataTypes) {
         // associations can be defined here
       }
     }
-  });
+  })
+  Suppliers.associate=(models)=>{
+    Suppliers.hasMany(models.Item)
+  }
   return Suppliers;
 };

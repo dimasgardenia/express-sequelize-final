@@ -6,9 +6,7 @@ router.get('/',(req,res)=>{
   model.Suppliers.findAll()
   .then((data)=>{
     res.render('suppliers',{data:data,err:false})
-    // res.send(data)
-  }).catch((err)=>{
-    res.send(err)
+     //res.send(data)
   })
 })
 

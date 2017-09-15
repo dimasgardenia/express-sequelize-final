@@ -13,7 +13,7 @@ router.get('/',(req,res)=>{
 })
 
 router.get('/add',(req,res)=>{
-  model.Item.findAll().then((data)=>{
+  model.Item.findAll().then((data,err)=>{
     res.render('additem',{data:data})
     // res.send("halo")
   }).catch((err)=>{
@@ -24,7 +24,8 @@ router.get('/add',(req,res)=>{
 router.post('/add',(req,res)=>{
   model.Item.create({
     name : req.body.name,
-    kota : req.body.kota,
+    brand : req.body.brand,
+    codeitem: req.body.codeitem,
     createAt: new Date(),
     updateAt: new Date()
   }).then(()=>{
@@ -47,7 +48,8 @@ router.post('/edit/:id',(req,res)=>{
   model.Item.update(
     {
     name: req.body.name,
-    kota: req.body.kota,
+    brand: req.body.brand,
+    codeitem: req.body.codeitem
   },{
     where:{
       id: parseInt(req.params.id)

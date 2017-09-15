@@ -5,14 +5,16 @@
     <title>Add Items</title>
   </head>
   <body>
-    <form action="/Items/add" method="post">
-      <label>Nama</label>
-      <input type="text" name="name" placeholder="Please input Suppliers Name here">
-      <label>Kota</label>
-      <input type="text" name="kota" placeholder="Please input Suppliers Kota">
+    <form action="/items/add" method="post">
+      <label>Product Name</label>
+      <input type="text" name="name" placeholder="Please input Product Name here">
+      <label>Brand Name</label>
+      <input type="text" name="brand" placeholder="Please input Brand Name ">
+      <label>Code Item</label>
+      <input type="text" name="codeitem" placeholder="Please input Code Item  ">
       <button type="submit" name="submit">Submit</button>
     </form>
     <br>
-    <a href="/suppliers"><button type="button" name="button">Cancel</button></a>
+    <a href="/items"><button type="button" name="button">Cancel</button></a>
   </body>
 </html>
