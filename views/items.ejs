@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Items</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th> ID </th>
+        <th> Name Product </th>
+        <th> Brand Name </th>
+        <th> Code Item </th>
+      </tr>
+      <% data.forEach(d=>{ %>
+        <tr>
+          <td>
+            <%= d.id %>
+          </td>
+          <td>
+            <%= d.name %>
+          </td>
+          <td>
+            <%= d.brand %>
+          </td>
+          <td>
+            <%= d.codeitem %>
+          </td>
+          <td><a href="/items/edit/<%= d.id %>"><button type="button" name="button">Edit</button></a></td>
+          <td><a href="/items/delete/<%= d.id %>"><button type="button" name="button">Delete</button></a></td>
+        </tr>
+        <% }) %>
+    </table>
+    <br>
+    <a href="/items/add"><button type="button" name="button">Add Items</button></a>
+    <a href="/"><button type="button" name="button">Back To Items</button></a>
+    <br>
+  </body>
+</html>
